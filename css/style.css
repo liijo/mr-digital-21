@@ -44,6 +44,11 @@ body{
 	font-family: "Avenir Next Regular";
 	font-size: 22px;
 }
+@media (min-width: 1440px){
+	body{
+		font-size: 22px;
+	}
+}
 img{
 	max-width: 100%;
 	height: auto;
@@ -52,6 +57,9 @@ img{
 	z-index: 9;
 }
 /*Header*/
+header .container{
+	max-width: 94%;
+}
 .navbar-toggler-icon{
 	height: 2px;
 	background-color: #fff;
@@ -61,6 +69,9 @@ img{
 }
 .navbar-toggler-icon.short{
 	width: 24px;
+	transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 .navbar-toggler{
 	padding: 0;
@@ -82,14 +93,62 @@ img{
 	font-size: 10px;
 	line-height: 18px;
 }
+.navbar-collapse {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+    -webkit-transform: translateX(-300px);
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    background-color: #fff;
+    height: 100vh;
+}
+.navbar-collapse.show{
+	transform: translateX(0);
+	-o-transform: translateX(0);
+	-webkit-transform: translateX(0);
+}
+.collapse:not(.show) {
+    display: block;
+}
+.navbar-toggler:hover .navbar-toggler-icon.short{
+	transform: translateX(6px);
+	-o-transform: translateX(6px);
+	-webkit-transform: translateX(6px);
+}
+.navbar-collapse .navbar-toggler-icon {
+	background-color: #000;
+}
+.navbar-collapse .navbar-toggler-icon{
+	transform-origin: center;
+}
+.navbar-collapse .navbar-toggler-icon:first-child{
+	transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+.navbar-collapse .navbar-toggler-icon.last{
+	transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+.navbar-collapse .navbar-toggler p{
+	color: #000;
+}
 
 /*Button style reset*/
 .btn{
 	border-radius: 0;
 }
-@media (min-width: 1024px){
+@media (min-width: 1440px){
 	.btn{
 		padding: 11px 27px;
+		font-size: 17px;
 	}
 }
 .btn.btn-outline-secondary.btn-white{
@@ -111,6 +170,21 @@ img{
 .quick-contact .btn{
 	text-transform: uppercase;
 	float: left;
+}
+@media (max-width: 1049px){
+	.quick-contact .btn{
+		font-size: 14px;
+	}
+}
+@media (max-width: 992px){
+	.quick-contact .btn{
+		display: block;
+	    clear: both;
+	    width: 100%;
+	}
+	.quick-contact .btn.border-end-0{
+		border-right: 1px solid #fff !important;
+	}
 }
 
 /*Banner*/
