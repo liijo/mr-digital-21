@@ -14,12 +14,14 @@
 
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="css/icons.css" />
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="CSS/owl.theme.default.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
 	<header>
 
-		<div class="d-flex flex-nowrap justify-content-between align-items-center position-absolute top-0 start-0 end-0 z-index-9 pt-4">
+		<div class="position-fixed top-0 start-0 end-0 z-index-9 pt-4">
 			<div class="container">
 				<div class="row">
 					
@@ -37,7 +39,7 @@
 								<span class="navbar-toggler-icon last"></span>
 								<p>MENU</p>
 							</button>
-							<ul class="navbar-nav me-auto mb-2">
+							<ul class="navbar-nav me-auto mb-2 mt-4">
 								<li class="nav-item active">
 									<a class="nav-link" aria-current="page" href="#">Home</a>
 								</li>
@@ -116,14 +118,19 @@
 
 	<section class="featured">
 		<div class="container">
-			<div class="logos d-flex align-items-center justify-content-between">
-				<span>FETURED IN</span>
-				<img src="images/pamtree.png" alt="pamtree" />
-				<img src="images/ssas.png" alt="ssas" />
-				<img src="images/beyond.png" alt="beyond" />
-				<img src="images/appdraft.png" alt="appdraft" />
-				<img src="images/xusa.png" alt="xusa" />
-				<img src="images/vism.png" alt="vism" />
+			<div class="row logos d-flex align-items-center justify-content-between">
+				<div class="col-lg-2 col-sm-3"><span>FETURED IN</span></div>
+				<div class="col-lg-10 col-sm-9">
+					<div class="logo-slider">
+						<div class="item"><img src="images/pamtree.png" alt="pamtree" /></div>
+						<div class="item"><img src="images/ssas.png" alt="ssas" /></div>
+						<div class="item"><img src="images/beyond.png" alt="beyond" /></div>
+						<div class="item"><img src="images/appdraft.png" alt="appdraft" /></div>
+						<div class="item"><img src="images/xusa.png" alt="xusa" /></div>
+						<div class="item"><img src="images/vism.png" alt="vism" /></div>
+						<div class="item"><img src="images/xusa.png" alt="xusa" /></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -153,7 +160,7 @@
 		</div>
 	</section><!-- .blurb -->
 
-	<section class="result-oriented">
+	<section class="result-oriented grey">
 		<div class="container">
 			<div class="text-center">
 				<h3 class="section-title mb-3">Can we really <span>deliver results..?</span></h3>
@@ -223,21 +230,154 @@
 
 	<section class="dev-stages">
 		<div class="container">
-			<div class="text-center">
+			<div class="text-center mb-5">
 				<h3 class="section-title mb-3">We support you with <span>every stage of the process…</span></h3>
 				<p class="mb-4">Whether that’s designing an industry-leading site that ranks on page 1 of Google or creating a scalable lead generation campaign on Facebook or LinkedIn.</p>
 				<p class="small">Whatever your marketing needs, we can help you get the results you’re looking for!</p>
 			</div>
-			<div class="dev-slider">
-				<div class="item"></div>
+			<div class="clearfix"></div>
+			<div class="dev-slider mt-5">
+				<div class="item">
+					<div class="row align-items-center">
+						<div class="col-6">
+							<div class="text-end item-wrap">
+								<img src="images/stage-1.png" alt="stage" />
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="item-wrap">
+								<h3>#1</h3>
+								<h2 class="h3">Develop websites & <br>landing pages</h2>
+								<p>We design and develop industry-leading websites that are built to meet your business objectives. Our experts specialise in WordPress, Shopify and ReactJS.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="row align-items-center">
+						<div class="col-6">
+							<div class="text-end item-wrap">
+								<img src="images/stage-1.png" alt="stage" />
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="item-wrap">
+								<h3>#1</h3>
+								<h2 class="h3">Develop websites & <br>landing pages</h2>
+								<p>We design and develop industry-leading websites that are built to meet your business objectives. Our experts specialise in WordPress, Shopify and ReactJS.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- Dev-stages -->
+
+	<section class="results grey" id="counter">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h3 class="section-title mb-3">We get <span>Real Results…</span></h3>
+				<p class="mb-4">Check out average results across our clients in 2020.</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="counter-wrap text-center">
+						<div class="counter-bg">
+							<img src="images/google.svg" alt="google" />
+						</div>
+						<div class="counter counter-value" data-count="574">0</div>
+						<div class="counter-caption">
+							<p class="mb-0">New Page 1 <br>Google Rankings</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="counter-wrap text-center">
+						<div class="counter-bg">
+							<img src="images/leads.svg" alt="google" />
+						</div>
+						<div class="counter counter-value" data-count="124">0</div>
+						<div class="counter-caption">
+							<p class="mb-0">Leads Generated</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="counter-wrap text-center">
+						<div class="counter-bg">
+							<img src="images/presentation.svg" alt="google" />
+						</div>
+						<div class="counter counter-value" data-count="54">0</div>
+						<div class="counter-caption">
+							<p class="mb-0">Sales Revenue</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="counter-wrap text-center">
+						<div class="counter-bg">
+							<img src="images/presentation.svg" alt="google" />
+						</div>
+						<div class="counter counter-value" data-count="54">0</div>
+						<div class="counter-caption">
+							<p class="mb-0">Money Saved</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- Results -->
+
+	<section class="case-studies pt-5 mt-5">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h3 class="section-title mb-3">We're already achieving <span>the results you want...</span></h3>
+				<p class="mb-4">Check out our case studies - proof that we get the results you want and need!</p>
+			</div>
+		</div>
+		<div class="cs-slider owl-carousel">
+			<div class="item">
+				<img src="images/shutterstock_703129864.png" alt=" " />
+				<p class="light-grey">UX DESIGN</p>
+				<h3>Delivered luxury hotel, The Berkeley, a staff website in just 10 days</h3>
+				<p>The Berkeley is a luxury 5-star hotel in London with over 100 years of experience in breaking new grounds in the hospitality industry.</p>
+				<a href="#">LEARN MORE</a>
+			</div>
+			<div class="item">
+				<img src="images/shutterstock_703129864.png" alt=" " />
+				<p class="light-grey">UX DESIGN</p>
+				<h3>Delivered luxury hotel, The Berkeley, a staff website in just 10 days</h3>
+				<p>The Berkeley is a luxury 5-star hotel in London with over 100 years of experience in breaking new grounds in the hospitality industry.</p>
+				<a href="#">LEARN MORE</a>
+			</div>
+			<div class="item">
+				<img src="images/shutterstock_703129864.png" alt=" " />
+				<p class="light-grey">UX DESIGN</p>
+				<h3>Delivered luxury hotel, The Berkeley, a staff website in just 10 days</h3>
+				<p>The Berkeley is a luxury 5-star hotel in London with over 100 years of experience in breaking new grounds in the hospitality industry.</p>
+				<a href="#">LEARN MORE</a>
+			</div>
+			<div class="item">
+				<img src="images/shutterstock_703129864.png" alt=" " />
+				<p class="light-grey">UX DESIGN</p>
+				<h3>Delivered luxury hotel, The Berkeley, a staff website in just 10 days</h3>
+				<p>The Berkeley is a luxury 5-star hotel in London with over 100 years of experience in breaking new grounds in the hospitality industry.</p>
+				<a href="#">LEARN MORE</a>
+			</div>
+			<div class="item">
+				<img src="images/shutterstock_703129864.png" alt=" " />
+				<p class="light-grey">UX DESIGN</p>
+				<h3>Delivered luxury hotel, The Berkeley, a staff website in just 10 days</h3>
+				<p>The Berkeley is a luxury 5-star hotel in London with over 100 years of experience in breaking new grounds in the hospitality industry.</p>
+				<a href="#">LEARN MORE</a>
 			</div>
 		</div>
 	</section>
 
-
 	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
