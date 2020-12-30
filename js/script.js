@@ -1,137 +1,214 @@
 jQuery(window).on('load resize', function(){
 	var windowHeight = jQuery(window).height();
 	jQuery('#banner').height(windowHeight);
+	if(jQuery(window).width() > 767){
+		jQuery('.logo-slider').addClass('owl-carousel');
+		jQuery('.logo-slider').owlCarousel({
+			loop:true,
+			margin:0,
+			nav:false,
+			dots:false,
+			items:6,
+			autoplay:true,
+			autoplayTimeout:4000,
+			autoplayHoverPause:true,
+		});
+	}
+	else{
+		jQuery('.logo-slider').trigger('destroy.owl.carousel');
+		jQuery('.logo-slider').addClass('off');
+		jQuery('.logo-slider').removeClass('owl-carousel');
+	}
 });
 
 jQuery(document).ready(function($){
-	$('.banner-slider').slick({
-	  dots: false,
-	  autoplay: true,
-	  infinite: true,
-	  speed: 350,
-	  slidesToShow: 1,
-	  arrows: false,
-	  adaptiveHeight: true
+	
+	$('.banner-slider').owlCarousel({
+		loop:true,
+		margin:0,
+		nav:false,
+		dots:false,
+		items:1,
+		autoplay:true,
+		autoplayTimeout:4000,
+		autoplayHoverPause:true,
 	});
 
-	$('.dev-slider').slick({
-	  dots: true,
-	  autoplay: true,
-	  infinite: true,
-	  speed: 300,
-	  slidesToShow: 1,
-	  arrows: false,
-	  adaptiveHeight: true
+	$('.result-slider').owlCarousel({
+		dots: false,
+		autoplay: true,
+		autoplayHoverPause:true,
+		loop: true,
+		items: 2,
+		margin: 30,
+		nav: true,
+		navText: ['<span class="icon-left-arrow"></span>', '<span class="icon-next-arrow"></span>'],
+		responsive:{
+			1024:{
+				nav: true,
+				items:2
+			},
+			768:{
+				nav: false,
+				items:2
+			},
+			575:{
+				nav: false,
+				items:1
+			},
+			0:{
+				nav: false,
+				items:1
+			}
+		}
 	});
 
-	$('.logo-slider').slick({
-	  dots: false,
-	  autoplay: true,
-	  infinite: true,
-	  speed: 350,
-	  slidesToShow: 6,
-	  slidesToScroll: 1,
-	  arrows: false,
-	  responsive: [
-	    {
-	      breakpoint: 1024,
-	      settings: {
-	        slidesToShow: 4
-	      }
-	    },
-	    {
-	      breakpoint: 768,
-	      settings: {
-	        slidesToShow: 3
-	      }
-	    },
-	    {
-	      breakpoint: 400,
-	      settings: {
-	        slidesToShow: 2
-	      }
-	    }
-	  ]
+	$('.checklist-slider').owlCarousel({
+		dots: false,
+		autoplay: true,
+		autoplayHoverPause:true,
+		loop: true,
+		items: 3,
+		margin: 0,
+		nav: true,
+		navText: ['<span class="icon-left-arrow"></span>', '<span class="icon-next-arrow"></span>'],
+		responsive:{
+			1024:{
+				nav: true,
+				items:3
+			},
+			768:{
+				nav: false,
+				items:2
+			},
+			575:{
+				nav: false,
+				items:1
+			},
+			0:{
+				nav: false,
+				items:1
+			}
+		}
 	});
 
-	$('.result-slider').slick({
-	  dots: false,
-	  autoplay: true,
-	  infinite: true,
-	  speed: 300,
-	  arrows: true,
-	  slidesToShow: 2,
-	  slidesToScroll: 1,
-	  nextArrow: '<button type="button" class="slick-next"><span class="icon-next-arrow"></span></button>',
-	  prevArrow: '<button type="button" class="slick-prev"><span class="icon-left-arrow"></span></button>',
-	  responsive: [
-	    {
-	      breakpoint: 1439,
-	      settings: {
-	        arrows: false,
-	        slidesToShow: 2
-	      }
-	    },
-	    {
-	      breakpoint: 768,
-	      settings: {
-	        arrows: false,
-	        slidesToShow: 2
-	      }
-	    },
-	    {
-	      breakpoint: 575,
-	      settings: {
-	        arrows: false,
-	        slidesToShow: 1
-	      }
-	    }
-	  ]
+	$('.dev-slider').owlCarousel({
+		loop: true,
+		nav: false,
+		dots: true,
+		autoplay: true,
+		items: 1,
+		autoplayHoverPause:true,
+	});
+
+	$('.testim-slider').owlCarousel({
+		loop: true,
+		nav: false,
+		dots: true,
+		autoplay: true,
+		items: 1,
+		autoplayHoverPause:true,
 	});
 
 	$('.cs-slider').owlCarousel({
-	    center: true,
-	    items:4,
-	    loop:false,
-	    margin:30,
-	    autoplay:true,
-	    autoplayTimeout:4000,
-	    autoplayHoverPause:true,
-	    nav:true,
-	    navText: ['<span class="icon-left-arrow"></span>', '<span class="icon-next-arrow"></span>'],
-	    responsive:{
-	        600:{
-	            items:4
-	        }
-	    }
+		dots: false,
+		center: true,
+		items:4,
+		loop:false,
+		margin:30,
+		autoplay:true,
+		autoplayTimeout:4000,
+		autoplayHoverPause:true,
+		nav:true,
+		navText: ['<span class="icon-left-arrow"></span>', '<span class="icon-next-arrow"></span>'],
+		responsive:{
+			1024:{
+				nav: true,
+				items:3
+			},
+			768:{
+				nav: false,
+				items:2
+			},
+			575:{
+				nav: false,
+				items:1
+			},
+			0:{
+				nav: false,
+				items:1
+			}
+		}
+	});
+
+	$('.team-slider').owlCarousel({
+		dots: false,
+		items:4,
+		loop:true,
+		margin:30,
+		autoplay:true,
+		autoplayTimeout:4000,
+		autoplayHoverPause:true,
+		nav:true,
+		navText: ['<span class="icon-left-arrow"></span>', '<span class="icon-next-arrow"></span>'],
+		responsive:{
+			1024:{
+				nav: true,
+				items: 4
+			},
+			768:{
+				nav: false,
+				items:2
+			},
+			575:{
+				nav: false,
+				items:1
+			},
+			0:{
+				nav: false,
+				items:1
+			}
+		}
 	});
 
 });
 
 var a = 0;
 $(window).scroll(function() {
-  var oTop = $('#counter').offset().top - window.innerHeight;
-  if (a == 0 && $(window).scrollTop() > oTop) {
-    $('.counter-value').each(function() {
-      var $this = $(this),
-        countTo = $this.attr('data-count');
-      $({
-        countNum: $this.text()
-      }).animate({
-          countNum: countTo
-        },
-        {
-          duration: 2000,
-          easing: 'swing',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
+	var oTop = $('#counter').offset().top - window.innerHeight;
+	if (a == 0 && $(window).scrollTop() > oTop) {
+		$('.counter-value').each(function() {
+			var $this = $(this),
+			countTo = $this.attr('data-count');
+			$({
+				countNum: $this.text()
+			}).animate({
+				countNum: countTo
+			},
+			{
+				duration: 2000,
+				easing: 'swing',
+				step: function() {
+					$this.text(Math.floor(this.countNum));
+				},
+				complete: function() {
+					$this.text(this.countNum);
             //alert('finished');
-          }
-        });
+        }
     });
-    a = 1;
-  }
+		});
+		a = 1;
+	}
+});
+
+jQuery(window).scroll(function(){
+	var headerTop = $('header').height();
+    if($(this).scrollTop() >= headerTop){
+    	$('#top-bar').removeClass('position-absolute');
+    	$('#top-bar').addClass('position-fixed visible');
+    }
+    else{
+    	$('#top-bar').addClass('position-absolute');
+    	$('#top-bar').removeClass('position-fixed visible');	
+    }
 });
