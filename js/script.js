@@ -215,6 +215,11 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	$('.navbar-toggler').click(function(){
+		$('#top-bar').toggleClass('menu-active');
+		$('body').toggleClass('overflow-hidden');
+	});
+
 });
 
 var a = 0;
@@ -238,7 +243,6 @@ $(window).scroll(function() {
 					},
 					complete: function() {
 						$this.text(this.countNum);
-	            	//alert('finished');
 	        		}
 	    		});
 			});
