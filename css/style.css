@@ -54,9 +54,24 @@ img{
 	max-width: 100%;
 	height: auto;
 }
+a{
+	text-decoration: none;
+	color: #E30613;
+}
+button:focus {
+    outline: 0;
+}
+h1, h2, h3{
+	font-family: "Avenir Next Bold";
+}
+
 .z-index-9{
 	z-index: 9;
 }
+.clearfix {
+    min-height: 1px;
+}
+
 /*Header*/
 header .container{
 	max-width: 94%;
@@ -115,7 +130,7 @@ header .container{
 	-o-transform: translateX(0);
 	-webkit-transform: translateX(0);
 }
-.collapse:not(.show) {
+.navbar-collapse.collapse:not(.show) {
     display: block;
 }
 .navbar-toggler:hover .navbar-toggler-icon.short{
@@ -172,8 +187,36 @@ header .container{
 #top-bar.visible .a{
 	fill: #000;
 }
-
-/*Button style reset*/
+@media (max-width: 757px){
+	#top-bar .quick-contact .pe-2{
+		padding-right: 0 !important;
+	}
+	#top-bar .quick-contact {
+		width: 100%;
+		text-align: right;
+	}
+	#top-bar .quick-contact .btn{
+		display: inline-block;
+		width: auto;
+		float: none;
+		clear: none;
+	}
+}
+/*Bootstrap style reset*/
+.modal-backdrop.show {
+    opacity: .9;
+}
+.pt-6{
+	padding-top: 95px;
+}
+.pb-7{
+	padding-bottom: 146px;
+}
+@media (max-width: 575px){
+	.float-end{
+		width: 100%;
+	}
+}
 .btn{
 	border-radius: 0;
 }
@@ -218,6 +261,14 @@ header .container{
 		border-right: 1px solid #fff !important;
 	}
 }
+.btn-outline-primary {
+    color: #E30613;
+    border-color: #E30613;
+}
+.btn-outline-primary:hover {
+    background-color: #E30613;
+    border-color: #E30613;
+}
 
 /*Banner*/
 #banner{
@@ -236,6 +287,11 @@ header .container{
 	left: 0;
 	right: 0;
 	background-color: rgba(0,0,0,0.5);
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,.9) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,.9) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
 }
 .banner-slider{
 	height: 90%;
@@ -331,7 +387,7 @@ header .container{
 	font-size: 22px;
 }
 .section-title {
-	font-family: "Avenir Next Medium";
+	font-family: "Avenir Next Bold";
 	font-size: 42px;
 	line-height: 61px;
 }
@@ -350,6 +406,9 @@ header .container{
 	right: 0;
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.66);
+}
+.result-slider.owl-carousel .item-content img{
+	width: 100%;
 }
 .result-slider .item-footer img{
 	width: 20%;
@@ -587,6 +646,11 @@ p.light-grey {
 	    right: 20px;
 	}
 }
+@media (max-width: 767px){
+	.cs-slider{
+		padding: 0 15px;
+	}
+}
 
 /*Tstimonial*/
 .testim-slider .testim-content{
@@ -607,6 +671,7 @@ p.light-grey {
     float: right;
 }
 .owl-carousel .owl-item img{
+	display: inline-block;
 	width: auto;
 }
 .testim-slider.owl-carousel .owl-dots:before{
@@ -693,4 +758,277 @@ section.strategy{
 .bottom-logos{
 	padding-top: 50px;
 	padding-bottom: 40px;
+}
+
+/*Our Process*/
+.processes .item{
+	display: flex;
+}
+@media (min-width: 575px){
+	.processes .item .number{
+		order: 2;
+		width: 30%;
+	}
+	.processes .item .content{
+		order: 1;
+		width: 35%;
+	}
+	.processes .item .image{
+		order: 3;
+		width: 35%;
+	}
+	.processes .item.even .content{
+		order: 3;
+	}
+	.processes .item.even .image{
+		order: 1;
+	}
+}
+@media (max-width: 575px){
+	.processes .item{
+		display: block;
+		text-align: center;
+	}
+	.processes .number .line{
+		display: none;
+	}
+	.processes .number .num{
+		width: 86px;
+		height: 86px;
+	}
+	.processes .number .num span{
+		padding: 5px;
+		line-height: 54px;
+    	font-size: 24px;
+	}
+}
+.processes h2{
+	font-family: "Avenir Next Bold";
+}
+.processes .number{
+	padding-top: 50px;
+	text-align: center;
+}
+.processes .number .num {
+	border: 10px solid #fff;
+	width: 116px;
+	height: 116px;
+	display: inline-block;
+	background-color: #fff;
+}
+.processes .number .num span{	
+	box-shadow: 0px 0px 18px #00000022;
+	color: #E30613;
+	padding: 30px;
+	font-style: italic;
+	border-radius: 50%;
+	display: block;
+	height: 100%;
+	line-height: 32px;
+	font-size: 34px;
+}
+.processes .number .line{
+	width: 1px;
+	height: 100%;
+	display: block;
+    margin: 0 auto;
+	border-right: 1px dashed #E30613;
+}
+
+.service-testim-slider .item{
+	box-shadow: 0px 3px 54px #00000029;
+	border-radius: 12px;
+	background-color: #fff;
+	padding: 56px 62px;
+}
+.service-testim-slider .item .content{
+	border-left-style: dashed !important;
+}
+.service-testim-slider .item footer strong{
+	text-transform: uppercase;
+	font-family: "Avenir Next Bold";
+}
+@media (max-width: 767px){
+	.service-testim-slider .item{
+		margin: 55px;
+		padding: 36px 25px;
+	}
+	.service-testim-slider .item .content{
+		border-width: 0 !important;
+	}
+}
+
+/*FAQ*/
+.fw-bolder{
+	font-family: "Avenir Next Extra Bold";
+}
+.accordion .accordion-item{
+	background-color: #fff;
+	box-shadow: 0px 0px 16px #00000027;
+	border-radius: 12px;
+	margin-bottom: 28px;
+}
+.accordion .accordion-item:last-child{
+	margin-bottom: 0;
+}
+.accordion-button{
+	border: 0;
+}
+.accordion-button:focus{
+	border: 0;
+	box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: transparent;
+}
+.accordion-header{
+	font-family: "Avenir Next Bold";
+	font-size: 18px;
+}
+.accordion-button:after{
+	background-image: url(../images/plus.svg);
+	background-size: 1.05rem;
+}
+.accordion-button:not(.collapsed):after{
+	background-image: url(../images/minus.svg);
+}
+
+/*Ripple animation*/
+.request-loader {
+	float: right;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 408px;
+	width: 408px;
+	border-radius: 100%;
+	background: #ffffff;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+}
+.request-loader span {
+	width: 408px;
+    height: 408px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 388px;
+	position: relative;
+	font-size: 72px;
+	top: 0;
+	left: 0;
+}
+.request-loader:after {
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	height: 100%;
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 100%;
+	-webkit-animation-name: ripple;
+	animation-name: ripple;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+	animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+	z-index: -1;
+}
+.request-loader:before {
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	height: 100%;
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 100%;
+	-webkit-animation-name: ripple;
+	animation-name: ripple;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+	animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+	z-index: -1;
+}
+
+@-webkit-keyframes ripple {
+	from {
+		opacity: 1;
+		transform: scale3d(0.75, 0.75, 1.5);
+	}
+	to {
+		opacity: 0;
+		transform: scale3d(3, 3, 2);
+	}
+}
+
+@keyframes ripple {
+	from {
+		opacity: 1;
+		transform: scale3d(0.75, 0.75, 1.5);
+	}
+	to {
+		opacity: 0;
+		transform: scale3d(3, 3, 2);
+	}
+}
+
+/*achievement*/
+.achievement h3{
+	font-family: "Avenir Next Extra Bold";
+}
+
+/*badge slider*/
+.badge-slider.owl-carousel .owl-nav .owl-prev{
+	left: -10px
+}
+.badge-slider.owl-carousel .owl-nav .owl-next{
+	right: -10px
+}
+.badge-slider.owl-carousel .owl-item{
+	text-align: center;
+}
+
+/*Modal Navigation*/
+.modal .modal-nav {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+}
+.modal .modal-nav span{
+	color: #fff;
+	font-size: 28px;
 }

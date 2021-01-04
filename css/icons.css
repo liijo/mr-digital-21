@@ -25,6 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-send:before {
+  content: "\e90d";
+}
+.icon-printer:before {
+  content: "\e90c";
+}
+.icon-plus:before {
+  content: "\e90a";
+}
+.icon-minus:before {
+  content: "\e90b";
+}
+.icon-arrow-down:before {
+  content: "\e906";
+}
 .icon-next-arrow:before {
   content: "\e909";
 }

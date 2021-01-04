@@ -13,8 +13,23 @@ jQuery(window).on('load resize', function(){
 			autoplayTimeout:4000,
 			autoplayHoverPause:true,
 		});
+		jQuery('.service-testim-slider').trigger('destroy.owl.carousel');
+		jQuery('.service-testim-slider').addClass('off');
+		jQuery('.service-testim-slider').removeClass('owl-carousel');
 	}
 	else{
+		jQuery('.service-testim-slider').addClass('owl-carousel');
+		jQuery('.service-testim-slider').owlCarousel({
+			loop:true,
+			margin:0,
+			nav:false,
+			dots:false,
+			items:1,
+			autoplay:true,
+			autoplayTimeout:4000,
+			autoplayHoverPause:true,
+		});
+
 		jQuery('.logo-slider').trigger('destroy.owl.carousel');
 		jQuery('.logo-slider').addClass('off');
 		jQuery('.logo-slider').removeClass('owl-carousel');
@@ -55,6 +70,35 @@ jQuery(document).ready(function($){
 			575:{
 				nav: false,
 				items:1
+			},
+			0:{
+				nav: false,
+				items:1
+			}
+		}
+	});
+
+	$('.badge-slider').owlCarousel({
+		dots: false,
+		autoplay: true,
+		autoplayHoverPause:true,
+		loop: true,
+		items: 3,
+		margin: 30,
+		nav: true,
+		navText: ['<span class="icon-left-arrow"></span>', '<span class="icon-next-arrow"></span>'],
+		responsive:{
+			1024:{
+				nav: true,
+				items:3
+			},
+			768:{
+				nav: false,
+				items:3
+			},
+			575:{
+				nav: false,
+				items:2
 			},
 			0:{
 				nav: false,
@@ -175,29 +219,31 @@ jQuery(document).ready(function($){
 
 var a = 0;
 $(window).scroll(function() {
-	var oTop = $('#counter').offset().top - window.innerHeight;
-	if (a == 0 && $(window).scrollTop() > oTop) {
-		$('.counter-value').each(function() {
-			var $this = $(this),
-			countTo = $this.attr('data-count');
-			$({
-				countNum: $this.text()
-			}).animate({
-				countNum: countTo
-			},
-			{
-				duration: 2000,
-				easing: 'swing',
-				step: function() {
-					$this.text(Math.floor(this.countNum));
+	if($('#counter').length){
+		var oTop = $('#counter').offset().top - window.innerHeight;
+		if (a == 0 && $(window).scrollTop() > oTop) {
+			$('.counter-value').each(function() {
+				var $this = $(this),
+				countTo = $this.attr('data-count');
+				$({
+					countNum: $this.text()
+				}).animate({
+					countNum: countTo
 				},
-				complete: function() {
-					$this.text(this.countNum);
-            //alert('finished');
-        }
-    });
-		});
-		a = 1;
+				{
+					duration: 2000,
+					easing: 'swing',
+					step: function() {
+						$this.text(Math.floor(this.countNum));
+					},
+					complete: function() {
+						$this.text(this.countNum);
+	            	//alert('finished');
+	        		}
+	    		});
+			});
+			a = 1;
+		}
 	}
 });
 
