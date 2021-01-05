@@ -1,30 +1,23 @@
 /* ======================
 # Author: Edwin
-# Date: 29-12-2020
+# Date: 05-01-2020
 ====================== */
 
 
 
 
-
+/* ===================
+# ABOUT PAGE
+=================== */
 .si-about-main {
     background: #E5E5E5 url('../images/about-main-bg.png') no-repeat right center/cover;
     padding: 130px 0 130px 0;
 }
-
 .si-about-main .panel-content {
     width: 100%;
     max-width: 636px;
     margin-left: auto;
 }
-
-
-
-
-
-
-
-/* =================== */
 .si-about-inner-grid {
     overflow: hidden;
 }
@@ -104,7 +97,7 @@
 }
 
 
-/* =================== */
+/*======= SECTIONS =======*/
 .si-about-blockquote { padding: 110px 0 110px 0; }
 .blockquote-alt {
     position: relative;
@@ -193,7 +186,8 @@
     .blockquote-alt .blockquote-footer h5 { font-size: 16px; }
 }
 
-/* ================= */
+
+/*======= SECTIONS =======*/
 .si-about-mission > .container {
     border-top: 5px solid #EDEDED;
     border-bottom: 5px solid #EDEDED;
@@ -209,8 +203,6 @@
         padding-bottom: 60px;
     }
 }
-
-
 
 /* ================= */
 .si-about-p-tracker {
@@ -342,7 +334,6 @@
 }
 
 
-
 /* ================= */
 .section-podcast { padding: 110px 0 130px 0; }
 .podcast-carousel .owl-nav {
@@ -448,11 +439,6 @@
     .section-podcast { padding: 70px 0 70px 0; }
     .podcast-carousel .owl-dots { margin-top: 10px; }
 }
-
-
-
-
-
 
 
 /* ===================
@@ -567,8 +553,6 @@
 }
 
 
-
-
 /* ===================
 # CONTACT
 =================== */
@@ -580,15 +564,7 @@
     background-position: top center;
     background-size: 100%;
 }
-
-
-
-
-
-
-.form-group-line {
-    margin-bottom: 22px;
-}
+.form-group-line { margin-bottom: 22px; }
 .form-group-line .form-control {
     font-size: 16px;
     padding: 0;
@@ -602,14 +578,9 @@
 .form-group-line .form-control::-moz-placeholder { color: #000000; }
 .form-group-line .form-control:-ms-input-placeholder { color: #000000; }
 .form-group-line .form-control:-moz-placeholder { color: #000000; }
-
 .form-group-line .form-control:focus {
     border-bottom-color: #E30613;
 }
-
-
-
-
 .contact-main-title h5 {
     font-size: 14px;
     font-weight: 600;
@@ -624,19 +595,7 @@
     font-weight: 600;
     margin-bottom: 0;
 }
-.contact-main-title p {
-    font-size: 20px;
-}
-
-
-
-
-
-
-
-
-
-
+.contact-main-title p { font-size: 20px; }
 .contact-form-panel .btn-primary {
     font-size: 14px;
     font-weight: 600;
@@ -647,36 +606,19 @@
     background-color: #E30613;
     border-color: #E30613;
 }
-
-
-
-
-
-
-
-
-.section-contact-map {
-    padding: 10px 0 10px 0;
-    
-}
+.section-contact-map { padding: 10px 0 10px 0; }
 .section-contact-map .row > .col-12 {
     height: 670px;
     z-index: 1;
 }
-.contact-address {
-    font-size: 20px;
-}
-.contact-address + .contact-address {
-    margin-top: 80px;
-}
+.contact-address { font-size: 20px; }
+.contact-address + .contact-address { margin-top: 80px; }
 .contact-address h4 {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 30px;
 }
-.contact-address p {
-    margin-bottom: 6px;
-}
+.contact-address p { margin-bottom: 6px; }
 .contact-address a {
     color: #000000;
     text-decoration: none;
@@ -690,10 +632,6 @@
     top: 4px;
     left: 0;
 }
-
-
-
-
 .map-frame {
     background-image: url('../images/dotted-world-map.svg');
     background-repeat: no-repeat;
@@ -705,15 +643,11 @@
     height: 100%;
     z-index: -1;
 }
-
-
 .contact-map .map-marker,
 .contact-map-inner .map-marker {
     top: 100px;
     right: 100px;
 }
-
-
 .map-frame .map-marker {
     position: absolute;
     width: 22px;
@@ -722,9 +656,7 @@
     border: 2px solid #E30613;
     display: inline-block;
     z-index: 20;
-
 }
-
 .map-frame .map-marker:before {
     content: '';
     width: 6px;
@@ -736,8 +668,6 @@
     position: absolute;
     z-index: 2;
 }
-
-
 .map-frame .map-marker:after {
     content: '';
     width: 22px;
@@ -761,9 +691,6 @@
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
 }
-
-
-
 .map-frame .map-marker.uk {
     top: 168px;
     left: 628px;
@@ -772,8 +699,6 @@
     top: 383px;
     left: 855px;
 }
-
-
 @-webkit-keyframes mapZoom {
     0% {
         webkit-transform: scale(1);
@@ -800,11 +725,9 @@
 }
 
 
-
-
-
-
-/* ========= FOOTER ========= */
+/* ===================
+# FOOTER
+=================== */
 .site-footer { color: #FFFFFF; }
 .site-footer a {
     color: #FFFFFF;
