@@ -45,7 +45,7 @@ body{
 	font-family: "Avenir Next Regular";
 	font-size: 22px;
 }
-@media (min-width: 1440px){
+@media (max-width: 1440px){
 	body{
 		font-size: 17px;
 	}
@@ -190,15 +190,30 @@ header .container{
 #top-bar.visible .navbar-toggler-icon{
 	background-color: #000;
 }
+#top-bar.visible.menu-active .navbar-toggler-icon{
+	background-color: #fff;	
+}
 #top-bar.visible .navbar-toggler p,
 #top-bar.visible .blog-header-logo p{
 	color: #000;
+}
+#top-bar.visible.menu-active .navbar-toggler p,
+#top-bar.visible.menu-active .blog-header-logo p{
+	color: #fff;
 }
 #top-bar.visible .btn.btn-outline-secondary.btn-white{
 	color: #000;
 	border-color: #000;
 }
-#top-bar .a{
+#top-bar.visible.menu-active .btn.btn-outline-secondary.btn-white{
+	color: #fff;
+	border-color: #fff;
+}
+#top-bar.visible.menu-active .btn.btn-outline-secondary.btn-white:hover{
+	border-color: #e30613;
+}
+#top-bar .a,
+#top-bar.visible.menu-active .a{
 	fill: #fff;
 }
 #top-bar.visible .a{
