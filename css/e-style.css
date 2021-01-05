@@ -572,6 +572,89 @@
 /* ===================
 # CONTACT
 =================== */
+.section-contact-form {
+    padding: 200px 0 200px 0;
+    background-color: #FFFFFF;
+    background-image: url('../images/contact-page-bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+}
+
+
+
+
+
+
+.form-group-line {
+    margin-bottom: 22px;
+}
+.form-group-line .form-control {
+    font-size: 16px;
+    padding: 0;
+    padding: 5px 0 10px 0;
+    border: 0;
+    border-bottom: 1px solid #E5E5E5;
+    border-radius: 0;
+    background-color: transparent;
+}
+.form-group-line .form-control::-webkit-input-placeholder { color: #000000; }
+.form-group-line .form-control::-moz-placeholder { color: #000000; }
+.form-group-line .form-control:-ms-input-placeholder { color: #000000; }
+.form-group-line .form-control:-moz-placeholder { color: #000000; }
+
+.form-group-line .form-control:focus {
+    border-bottom-color: #E30613;
+}
+
+
+
+
+.contact-main-title h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #E30613;
+}
+.contact-main-title .section-title {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.contact-main-title h6 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.contact-main-title p {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.contact-form-panel .btn-primary {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 25px;
+}
+.contact-form-panel .form-check .form-check-input:checked {
+    background-color: #E30613;
+    border-color: #E30613;
+}
+
+
+
+
+
+
+
+
 .section-contact-map {
     padding: 10px 0 10px 0;
     
@@ -626,11 +709,6 @@
 
 .contact-map .map-marker,
 .contact-map-inner .map-marker {
-    
-    /* width: 12px; */
-    /* border: solid 1px var(--primary-brand-color); */
-    /* border-radius: 200px; */
-    /* height: 12px; */
     top: 100px;
     right: 100px;
 }
@@ -685,8 +763,15 @@
 }
 
 
-.map-frame .map-marker.uk {}
-.map-frame .map-marker.india {}
+
+.map-frame .map-marker.uk {
+    top: 168px;
+    left: 628px;
+}
+.map-frame .map-marker.india {
+    top: 383px;
+    left: 855px;
+}
 
 
 @-webkit-keyframes mapZoom {
