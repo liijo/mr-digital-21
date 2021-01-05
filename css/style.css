@@ -98,6 +98,10 @@ header .container{
 .navbar-toggler:focus{
 	box-shadow: none;
 }
+.navbar-toggler .toggle-wrap {
+    min-height: 36px;
+    display: inline-block;
+}
 .navbar-toggler p{
 	margin-bottom: 0;
 	color: #fff;
@@ -141,20 +145,26 @@ header .container{
 }
 .navbar-collapse .navbar-toggler-icon {
 	background-color: #000;
+	transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
 }
-.navbar-collapse .navbar-toggler-icon{
+.menu-active .navbar-toggler-icon{
 	transform-origin: center;
 	margin: 0;
 }
-.navbar-collapse .navbar-toggler-icon:first-child{
-	transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
+.menu-active .navbar-toggler-icon:first-child{
+	transform: rotate(45deg) translate(10px, 10px);
+	-o-transform: rotate(45deg) translate(10px, 10px);
+	-webkit-transform: rotate(45deg) translate(10px, 10px);
 }
-.navbar-collapse .navbar-toggler-icon.last{
-	transform: rotate(135deg);
-	-o-transform: rotate(135deg);
-	-webkit-transform: rotate(135deg);
+.menu-active .navbar-toggler-icon.short{
+	display: none;
+}
+.menu-active .navbar-toggler-icon.last{
+	transform: rotate(135deg) translate(10px, -10px);
+	-o-transform: rotate(135deg) translate(10px, -10px);
+	-webkit-transform: rotate(135deg) translate(10px, -10px);
 	margin-top: -2px;
 }
 .navbar-collapse .navbar-toggler p{
