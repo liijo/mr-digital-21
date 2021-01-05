@@ -253,6 +253,9 @@ $(window).scroll(function() {
 
 jQuery(window).scroll(function(){
 	var headerTop = $('header').height();
+	if($('header').hasClass('short-header')){
+		headerTop = 1;
+	}
     if($(this).scrollTop() >= headerTop){
     	$('#top-bar').removeClass('position-absolute');
     	$('#top-bar').addClass('position-fixed visible');
@@ -260,5 +263,5 @@ jQuery(window).scroll(function(){
     else{
     	$('#top-bar').addClass('position-absolute');
     	$('#top-bar').removeClass('position-fixed visible');	
-    }
+	}
 });

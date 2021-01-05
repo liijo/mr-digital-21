@@ -116,6 +116,12 @@ header .container{
 	font-size: 10px;
 	line-height: 18px;
 }
+.short-header .blog-header-logo p{
+	color: #000;
+}
+.short-header .menu-active .blog-header-logo p{
+	color: #fff;
+}
 .navbar-collapse {
     position: fixed;
     left: 0;
@@ -187,37 +193,53 @@ header .container{
 #top-bar.visible{
 	background-color: #fff;
 }
+.short-header #top-bar .navbar-toggler-icon,
 #top-bar.visible .navbar-toggler-icon{
 	background-color: #000;
 }
+.short-header #top-bar.menu-active .navbar-toggler-icon,
 #top-bar.visible.menu-active .navbar-toggler-icon{
 	background-color: #fff;	
 }
+.short-header #top-bar .navbar-toggler p,
 #top-bar.visible .navbar-toggler p,
 #top-bar.visible .blog-header-logo p{
 	color: #000;
 }
+.short-header #top-bar.menu-active .navbar-toggler p,
 #top-bar.visible.menu-active .navbar-toggler p,
 #top-bar.visible.menu-active .blog-header-logo p{
 	color: #fff;
 }
+.short-header #top-bar .btn.btn-outline-secondary.btn-white,
 #top-bar.visible .btn.btn-outline-secondary.btn-white{
 	color: #000;
 	border-color: #000;
 }
+.short-header #top-bar .btn.btn-outline-secondary.btn-white:hover{
+	border-color: #E30613;
+	color: #fff;
+}
+.short-header #top-bar.menu-active .btn.btn-outline-secondary.btn-white,
 #top-bar.visible.menu-active .btn.btn-outline-secondary.btn-white{
 	color: #fff;
 	border-color: #fff;
 }
+.short-header #top-bar.menu-active .btn.btn-outline-secondary.btn-white:hover,
 #top-bar.visible.menu-active .btn.btn-outline-secondary.btn-white:hover{
 	border-color: #e30613;
 }
 #top-bar .a,
+.short-header #top-bar .a,
 #top-bar.visible.menu-active .a{
 	fill: #fff;
 }
+.short-header #top-bar .a,
 #top-bar.visible .a{
 	fill: #000;
+}
+.short-header #top-bar.menu-active .a{
+	fill: #fff;
 }
 @media (max-width: 757px){
 	#top-bar .quick-contact .pe-2{
