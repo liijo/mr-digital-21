@@ -76,7 +76,7 @@ h1, h2, h3{
 }
 
 /*Header*/
-header .container{
+#top-bar .container{
 	max-width: 94%;
 }
 .navbar-toggler-icon{
@@ -307,8 +307,8 @@ header .container{
     background-color: #E30613;
 }
 .nav-pills .nav-link{
-    padding: 7px 40px;
-    line-height: 20px;
+    padding: 7px 40px 9px;
+    line-height: 26px;
     color: #000000;
 }
 
@@ -394,8 +394,8 @@ header .container{
 
 @media (min-width: 1440px){
 	.banner-slider .h1{
-		line-height: 80px;
-		font-size: 61px;
+		line-height: 65px;
+		font-size: 48px;
 	}	
 	.banner-footer .h3{
 		font-size: 72px;

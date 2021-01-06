@@ -168,7 +168,7 @@ jQuery(document).ready(function($){
 		responsive:{
 			1024:{
 				nav: true,
-				items:3
+				items:3.99
 			},
 			768:{
 				nav: false,

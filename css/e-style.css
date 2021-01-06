@@ -98,7 +98,7 @@
 
 
 /*======= SECTIONS =======*/
-.si-about-blockquote { padding: 110px 0 110px 0; }
+.si-about-blockquote { padding: 0 0 110px 0; }
 .blockquote-alt {
     position: relative;
     margin-bottom: 0;
