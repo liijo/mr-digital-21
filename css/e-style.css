@@ -10,13 +10,25 @@
 # ABOUT PAGE
 =================== */
 .si-about-main {
-    background: #E5E5E5 url('../images/about-main-bg.png') no-repeat right center/cover;
-    padding: 130px 0 130px 0;
+    background: #E5E5E5 url('../images/background.jpg') no-repeat right center/cover;
 }
 .si-about-main .panel-content {
+    padding: 130px 0 130px 0;
     width: 100%;
     max-width: 636px;
-    margin-left: auto;
+}
+@media (min-width: 768px){
+    .si-about-main .panel-content {
+        margin-left: auto;
+    }
+}
+.si-about-main .panel-media{
+    height: 100%;
+    min-height: 400px;
+    background-image: url(../images/about-ross.png);
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
 }
 .si-about-inner-grid {
     overflow: hidden;
