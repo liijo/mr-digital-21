@@ -109,7 +109,7 @@
     content: '';
     position: absolute;
     display: inline-block;
-    width: 100px;
+    width: 101px;
     height: 84px;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -557,7 +557,7 @@
 # CONTACT
 =================== */
 .section-contact-form {
-    padding: 200px 0 200px 0;
+    padding: 200px 0 100px 0;
     background-color: #FFFFFF;
     background-image: url('../images/contact-page-bg.png');
     background-repeat: no-repeat;
