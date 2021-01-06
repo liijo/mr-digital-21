@@ -1,6 +1,6 @@
 jQuery(window).on('load resize', function(){
 	var windowHeight = jQuery(window).height();
-	jQuery('#banner').height(windowHeight);
+	//jQuery('#banner').height(windowHeight);
 	if(jQuery(window).width() > 767){
 		jQuery('.logo-slider').addClass('owl-carousel');
 		jQuery('.logo-slider').owlCarousel({
@@ -156,8 +156,9 @@ jQuery(document).ready(function($){
 
 	$('.cs-slider').owlCarousel({
 		dots: false,
-		center: true,
+		//center: true,
 		items:4,
+		stagePadding: 200,
 		loop:false,
 		margin:30,
 		autoplay:true,
@@ -168,7 +169,7 @@ jQuery(document).ready(function($){
 		responsive:{
 			1024:{
 				nav: true,
-				items:3.99
+				items:3
 			},
 			768:{
 				nav: false,

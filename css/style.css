@@ -342,6 +342,7 @@ h1, h2, h3{
 
 /*Banner*/
 #banner{
+	height: 100vh;
 	overflow: hidden;
 	background-image: url(../images/banner.jpg);
 	background-size: cover;
@@ -1205,4 +1206,11 @@ section.strategy{
 }
 .form-captcha input[type=text]:focus{
 	outline: 0;
+}
+
+@media screen and (max-height: 820px){
+	.banner-slider .h1{
+		line-height: 54px;
+		font-size: 34px;
+	}
 }
